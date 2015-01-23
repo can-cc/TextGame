@@ -294,6 +294,7 @@ public class MapAlpha implements GameMap {
 		map.show();
 	}
 
+	//!!!!!!have a bug  i'm not sure.
 	class EnemyFilter {
 		protected int[][] enemyMap = new int[y][x];
 		protected EnemyFactory eFactory = new EnemyFactoryAlpha(); 
@@ -327,7 +328,7 @@ public class MapAlpha implements GameMap {
 			Random random = new Random();
 			for(int i=0; i<n; i++){
 				int ex = random.nextInt(xPos + 3) % 6 + (xPos - 3);
-				int ey = random.nextInt(yPos + 3) % 6 + (xPos - 3);
+				int ey = random.nextInt(yPos + 3) % 6 + (yPos - 3);
 				ex = ex>=x ? x-1 : ex;
 				ex = ex<0 ? 0 : ex;
 				ey = ey>=y ? y-1 : ey;
